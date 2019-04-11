@@ -54,14 +54,30 @@
 		6624CA78225F87BE0016D574 /* A2ZLearn */ = {
 			isa = PBXGroup;
 			children = (
-				6624CA79225F87BE0016D574 /* AppDelegate.swift */,
-				6624CA7B225F87BE0016D574 /* ViewController.swift */,
-				6624CA7D225F87BE0016D574 /* Main.storyboard */,
+				66831343225F89CA0044CDD0 /* ViewControllers */,
+				66831345225F8A100044CDD0 /* Views */,
 				6624CA80225F87BE0016D574 /* Assets.xcassets */,
 				6624CA82225F87BE0016D574 /* LaunchScreen.storyboard */,
 				6624CA85225F87BE0016D574 /* Info.plist */,
 			);
 			path = A2ZLearn;
+			sourceTree = "<group>";
+		};
+		66831343225F89CA0044CDD0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6624CA79225F87BE0016D574 /* AppDelegate.swift */,
+				6624CA7B225F87BE0016D574 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		66831345225F8A100044CDD0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6624CA7D225F87BE0016D574 /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +317,7 @@
 				6624CA8A225F87BE0016D574 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
