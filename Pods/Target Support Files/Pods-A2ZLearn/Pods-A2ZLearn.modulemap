@@ -1,0 +1,6 @@
+framework module Pods_A2ZLearn {
+  umbrella header "Pods-A2ZLearn-umbrella.h"
+
+  export *
+  module * { export * }
+}
