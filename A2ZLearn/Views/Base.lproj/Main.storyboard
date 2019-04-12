@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Bjl-yJ-ah7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Bjl-yJ-ah7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -45,7 +45,7 @@
             </objects>
             <point key="canvasLocation" x="538" y="68"/>
         </scene>
-        <!--LearnA ToZ View Controller-->
+        <!--Data Source-->
         <scene sceneID="qA0-U2-7Ln">
             <objects>
                 <viewController id="1oT-kt-aRC" customClass="LearnAToZViewController" customModule="A2ZLearn" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,12 +56,38 @@
                     <view key="view" contentMode="scaleToFill" id="FKF-K7-ATi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQr-vG-Uec" customClass="FSPagerView" customModule="FSPagerView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="3yL-Qu-SyF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="automaticSlidingInterval">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="1oT-kt-aRC" id="q7O-GF-Fu4"/>
+                                    <outlet property="delegate" destination="1oT-kt-aRC" id="3W6-8q-eW6"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BQr-vG-Uec" secondAttribute="trailing" id="68c-yt-0xz"/>
+                            <constraint firstItem="BQr-vG-Uec" firstAttribute="leading" secondItem="FKF-K7-ATi" secondAttribute="leading" id="S8u-Jz-8aa"/>
+                            <constraint firstItem="BQr-vG-Uec" firstAttribute="top" secondItem="u6k-Aa-88t" secondAttribute="bottom" id="k69-KV-jwe"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pagerView" destination="BQr-vG-Uec" id="w4L-a2-c3Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DLc-Pr-svZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1343" y="68"/>
+            <point key="canvasLocation" x="1341.5999999999999" y="67.916041979010501"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V9K-Ji-vGf">
