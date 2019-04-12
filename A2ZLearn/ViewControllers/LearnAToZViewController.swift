@@ -19,9 +19,9 @@ class LearnAToZViewController: UIViewController {
     @IBOutlet weak var pagerView: FSPagerView! {
         didSet {
             self.pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
-            self.pagerView.transformer = FSPagerViewTransformer(type: .linear)
-            let transform = CGAffineTransform(scaleX: 0.6, y: 0.75)
-            self.pagerView.itemSize = self.pagerView.frame.size.applying(transform)
+            //self.pagerView.transformer = FSPagerViewTransformer(type: .linear)
+            //let transform = CGAffineTransform(scaleX: 0.6, y: 0.75)
+            //self.pagerView.itemSize = self.pagerView.frame.size.applying(transform)
         }
     }
 
@@ -95,10 +95,14 @@ extension LearnAToZViewController:FSPagerViewDelegate,FSPagerViewDataSource{
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
         pagerView.deselectItem(at: index, animated: true)
         pagerView.scrollToItem(at: index, animated: true)
-        self.speakTheLetter(text: "This is" + lettersName[index])
+        self.speakTheLetter(text: "This is " + lettersName[index] + ".")
     }
     
     func pagerView(_ pagerView: FSPagerView, didEndDisplaying cell: FSPagerViewCell, forItemAt index: Int){
+        
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, willDisplay cell: FSPagerViewCell, forItemAt index: Int) {
         self.speakTheLetter(text: lettersName[index])
     }
     
