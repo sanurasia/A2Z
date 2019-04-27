@@ -14,6 +14,7 @@
 		6624CA81225F87BE0016D574 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6624CA80225F87BE0016D574 /* Assets.xcassets */; };
 		6624CA84225F87BE0016D574 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6624CA82225F87BE0016D574 /* LaunchScreen.storyboard */; };
 		66831347225F8EB00044CDD0 /* LearnAToZViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66831346225F8EB00044CDD0 /* LearnAToZViewController.swift */; };
+		BC8F73ED22607BB800CC61D5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8F73EC22607BB800CC61D5 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		6624CA83225F87BE0016D574 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6624CA85225F87BE0016D574 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66831346225F8EB00044CDD0 /* LearnAToZViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnAToZViewController.swift; sourceTree = "<group>"; };
+		BC8F73EC22607BB800CC61D5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC8F73ED22607BB800CC61D5 /* AVFoundation.framework in Frameworks */,
 				4CE9D6B01802BCEA774C5FFF /* Pods_A2ZLearn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +48,7 @@
 		4177AF4CD0E0C3441835D1E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC8F73EC22607BB800CC61D5 /* AVFoundation.framework */,
 				20E3C8758A0494CA5C469111 /* Pods_A2ZLearn.framework */,
 			);
 			name = Frameworks;
@@ -141,6 +145,7 @@
 				TargetAttributes = {
 					6624CA75225F87BE0016D574 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = YRW658NCVU;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -348,6 +353,7 @@
 			baseConfigurationReference = 24112DFEDE129091B9676122 /* Pods-A2ZLearn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YRW658NCVU;
 				INFOPLIST_FILE = A2ZLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.Constraint.A2ZLearn;
@@ -361,6 +367,7 @@
 			baseConfigurationReference = 1FA008D35DA13AB38957613C /* Pods-A2ZLearn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YRW658NCVU;
 				INFOPLIST_FILE = A2ZLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.Constraint.A2ZLearn;
