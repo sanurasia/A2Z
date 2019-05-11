@@ -12,7 +12,7 @@ import AVFoundation
 
 class LearnAToZViewController: UIViewController {
     
-    fileprivate let lettersName = ["A","B","C","D","E","F","G","H","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+    var  lettersName = [String]()
     
     let speechSynthesizer = AVSpeechSynthesizer()
     
@@ -107,9 +107,10 @@ extension LearnAToZViewController:FSPagerViewDelegate,FSPagerViewDataSource{
     }
     
     func speakTheLetter(text:String){
-        let speechUtterance: AVSpeechUtterance = AVSpeechUtterance(string:text)
+        let speechUtterance: AVSpeechUtterance = AVSpeechUtterance(string:text.lowercased())
         speechUtterance.rate = AVSpeechUtteranceMaximumSpeechRate / 3.0
         speechUtterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+          //speechSynthesizer.pauseSpeaking(at: .word)
         speechSynthesizer.speak(speechUtterance)
     }
 }
